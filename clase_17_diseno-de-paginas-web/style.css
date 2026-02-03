@@ -1,0 +1,326 @@
+/* 
+
+paleta de colores
+
+#0F0A0A
+#F5EFED
+#2292A4
+#BDBF09
+#D96C06
+
+*/
+
+/* aqui usaremos un tipo de letra que nosotros descargamos y no existe en google fonts */
+@font-face {
+    font-family: "MiDancingScript"; /* puede ser cualquier nombre germanLetra */
+    src: url(/assets/fonts/dancingScript.ttf) format("truetype");
+    /* src: url(https://pcymac.com/diseno-de-paginas-web/assets/fonts/dancingScript.ttf) format("truetype"); */
+    /* font-weight: normal; */
+    font-style: normal;
+    font-display: swap; /* Esto ayuda a que el texto no desaparezca mientras carga */
+}
+
+:root {
+    /* Definimos nuestra fuente principal (Limpia y moderna) */
+    /* --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; */
+    --font-main: 'Courier New', Courier, monospace;    
+    
+    /* Definimos nuestra fuente para detalles "Tech" o Código */
+    --font-code: 'Cascadia Code', 'Courier New', monospace;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    color: #0F0A0A;
+    background-color: #F5EFED;
+}
+
+/* Usamos la Courier solo para los títulos o etiquetas pequeñas para dar ese look de programador */
+h2, .tag-completado {
+    font-family: var(--font-code);
+    letter-spacing: -1px;
+}
+
+html {
+    font-size: 62.5%;
+    /* scroll-behavior: smooth; */
+}
+
+/* header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 320px;
+    height: 320px;
+    text-align: center;
+    background-color: #0F0A0A;
+    color: #F5EFED;
+} */
+
+/*******************************************
+
+Logo y barra de navegacion
+
+*******************************************/
+header {
+    
+    font-weight: bold;
+    padding: 20px;
+    
+    
+}
+
+.contenedor__logo {
+    font-size: 3.6rem;
+    margin-bottom: 2rem;
+}
+
+.contenedor__logo a {
+    text-decoration: none;
+}
+
+.contenedor__logo img {
+    width: 10rem;
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    font-size: 2.4rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.menu--link {
+    text-decoration: none;  /* para quitar el subrayado del la ancla */
+    cursor: pointer;        /* para que aparezca la manita del cursor */
+    position: relative; /* Muy importante para que el ::after se posicione respecto al link */
+    padding-bottom: 1rem;
+    color: black;
+}
+
+.menu--link:hover {
+    color: #BDBF09;
+}
+
+/*******************************************
+
+Creamos la lÃ­nea con el pseudo elemento ::after
+
+*******************************************/
+
+
+.menu--link::after {
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1rem;
+    background-color: #D96C06;
+    transition: width 0.3s ease;
+    position: absolute;
+}
+
+.menu--link:hover::after {
+    content: "";
+    width: 100%;
+}
+
+/* .menu--link:hover {
+} */
+
+
+/*******************************************
+
+Tabla de cursos
+
+*******************************************/
+
+.contenedor__tabla {
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F5EFED; /* Fondo claro de tu paleta */
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.tabla--diplomas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 30px rgba(15, 10, 10, 0.1); /* Usando tu negro para la sombra */
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 1.4rem;
+}
+
+/* Encabezado con tu Azul Turquesa (#2292A4) */
+.tabla--diplomas th {
+    background-color: #2292A4; 
+    color: #F5EFED; /* Texto en tu blanco hueso */
+    text-align: left;
+    padding: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Filas con tu Negro (#0F0A0A) para el texto */
+.tabla--diplomas td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #F5EFED;
+    color: #0F0A0A; 
+}
+
+/* Efecto Zebra suave usando tu blanco hueso */
+.tabla--diplomas tbody tr:nth-child(even) {
+    background-color: rgba(245, 239, 237, 0.5);
+}
+
+/* HOVER: Resaltado con tu Naranja (#D96C06) pero muy suave o en el borde */
+.tabla--diplomas tbody tr:hover {
+    background-color: rgba(34, 146, 164, 0.05); /* Un toque del azul */
+    border-left: 5px solid #D96C06; /* Línea naranja al pasar el mouse */
+    transition: all 0.4s ease;
+}
+
+/* Etiquetas de estatus con tu Verde Olivo/Amarillo (#BDBF09) */
+.tag--completado {
+    background-color: #BDBF09;
+    color: #0F0A0A;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Diploma con tu Naranja (#D96C06) */
+.tag--meta {
+    background-color: #D96C06;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+/*******************************************
+
+Contenedor Titulo Arcoiris
+
+*******************************************/
+
+.contenedor__titulo {
+    background-color: #D96C06;
+    padding: 20px;
+    font-size: 6.2rem;
+    font-weight: bolder;
+}
+
+/* técnica de "Shadow Wrapping" (Envoltura de sombra). Al poner valores positivos y negativos (como 1px y -1px), estás obligando a la sombra a expandirse en todas las direcciones, creando ese borde sólido que parece el contorno de un sticker físico. */
+/* h1 {
+    font-family: 'MiDancingScript', cursive;
+    color: #1b04b1;
+    text-shadow: 
+        1px 1px 0px #F5EFED,
+        -1px -1px 0px #F5EFED,
+        2px 2px 0px #F5EFED,
+        -2px -2px 0px #F5EFED,
+        3px 3px 0px #F5EFED,
+        -3px -3px 0px #F5EFED,
+        -4px -4px 0px #F5EFED,
+        4px 4px 0px #F5EFED,
+        5px 5px 0px #F5EFED,
+        -5px -5px 0px #F5EFED;
+} */
+
+/* hace un efecto de que estan en el aire */
+/* h1 {
+    font-family: 'MiDancingScript', cursive;
+    color: #1b04b1;
+    text-shadow: 
+        2px  2px 0px #F5EFED,
+        2px -2px 0px #F5EFED,
+       -2px  2px 0px #F5EFED,
+       -2px -2px 0px #F5EFED,
+        4px  4px 0px #F5EFED,
+        4px -4px 0px #F5EFED,
+       -4px  4px 0px #F5EFED,
+       -4px -4px 0px #F5EFED,
+       8px 8px 15px rgba(15, 10, 10, 5.3);
+} */
+
+/* El problema de usar text-shadow para hacer stickers es que, al ser sombras desplazadas en línea recta, los bordes quedan "pixelados" o con esquinas muy duras, especialmente en una letra cursiva como Dancing Script.
+
+Para lograr un efecto de sticker realmente redondeado y suave, la técnica profesional actual no es usar sombras, sino una propiedad de CSS llamada -webkit-text-stroke combinada con un truco de pintura.
+
+Aquí tienes cómo hacerlo para que se vea como un recorte perfecto:
+El método del "Contorno Redondeado" */
+
+.titulo-sticker span {
+    font-family: 'MiDancingScript', cursive;
+    /* font-size: 5rem; */
+    color: #2292A4; /* Color de tu letra */
+    /* margin: 0 10px; */
+    
+    /* 1. Creamos un borde grueso y redondeado */
+    -webkit-text-stroke: 2rem #F5EFED;
+    
+    
+    /* 2. Truco vital: paint-order */
+    /* Esto hace que el borde se dibuje POR DEBAJO de la letra, 
+       manteniendo la forma de la letra original y redondeando las esquinas exteriores */
+    paint-order: stroke fill;
+    
+    /* 3. Una sombra suave al final para que parezca pegado */
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+
+}
+
+
+/* ahora quiero cambiar cada letra de cierto color, por ejemplo la primer letra que sea color #3e59f0, la segunda letra sea #34cea8,
+
+la tercer letra sea #34cea8 y por ultima la cuarta letra sea de color
+
+#ffb02f y despues volvemos a empezar 
+
+Para lograr ese efecto de "arcoíris" repetitivo en tu título tipo sticker, la mejor forma de hacerlo sin ensuciar tu HTML con muchas etiquetas <span> es utilizar la pseudo-clase :nth-child,*/
+
+/* Aplicamos tu patrón de colores cada 4 letras */
+
+/* 1ra letra (y cada 4 después: 5, 9...) */
+.titulo-sticker span:nth-child(4n+1) {
+    color: #3e59f0;
+}
+
+/* 2da letra (y cada 4 después: 6, 10...) */
+.titulo-sticker span:nth-child(4n+2) {
+    color: #34cea8;
+}
+
+/* 3ra letra (y cada 4 después: 7, 11...) */
+.titulo-sticker span:nth-child(4n+3) {
+    color: #34cea8; /* Repetimos el color como pediste */
+}
+
+/* 4ta letra (y cada 4 después: 8, 12...) */
+.titulo-sticker span:nth-child(4n) {
+    color: #ffb02f;
+}
+
+@media (max-width: 600px) {
+    .titulo-sticker span {
+        font-size: 3rem; /* Se hace más pequeño en celulares */
+        -webkit-text-stroke: 5px #F5EFED; /* Reducimos el borde para que no tape la letra */
+    }
+}

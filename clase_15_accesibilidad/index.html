@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos ARIA para accesibilidad web con lectores de pantalla</title>
+</head>
+<body>
+    <img src="/img/aria.png" alt="">
+    <p>
+        ¿Qué es ARIA?
+
+        ARIA significa Accessible Rich Internet Applications (Aplicaciones de Internet Ricas y Accesibles). Es un conjunto de atributos especiales que añadimos al código HTML para ayudar a las personas con discapacidades (visuales, motoras o cognitivas) a navegar por nuestro sitio.
+
+        ¿Para qué sirve?
+
+        Sirve para darle información extra a los lectores de pantalla (el software que usan las personas ciegas para que la computadora les lea lo que hay en pantalla).
+
+        HTML básico a veces no es suficiente. Por ejemplo:
+
+        Describe elementos que no tienen texto: Si tienes un botón que solo tiene un icono de una "X", el lector de pantalla no sabrá qué hace. Con ARIA, le dices: "Este es un botón para cerrar".
+
+        Indica estados: Avisa si un menú está "desplegado" o "cerrado".
+
+        Crea alertas: Puede avisar al usuario si hubo un error en el formulario sin que el usuario tenga que buscarlo.
+
+
+    </p>
+    <!-- Botón con su ícono sin texto -->
+    <button aria-label="cerrar ventana">x</button>
+
+    <!-- Navegación sin titulo visible -->
+    <header>
+        <nav aria-label="Menú principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+        </nav>
+    </header>
+
+    <!-- Input cuando el label no es suficiente -->
+    <input type="search" aria-label="buscador de productos">
+
+    <!-- campo con instrucciones -->
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" aria-describedby="password-help">
+    <small id="password-help">mínimo 8 caracteres, incluya numeros y letras</small>
+
+    <!-- Imagen con descripción -->
+    <img src="/img/ventas.png" alt="Ventas 2023" 
+    width="30%"
+    aria-describedby="grafica-descripcion">
+    <p id="grafica-descripcion">Las ventas aumentaron en el Q3 del 2023</p>
+
+    <!-- Región principal -->
+    <div role="main">
+        <h3>Contenido principal de la seccion</h3>
+        <p>Aqui va el contenido mas importante</p>
+    </div>
+
+    <!-- Alertas importantes -->
+    <div role="alert">
+        ¡Tu sesión expirará en 5 minutos!
+    </div>
+    
+</body>
+</html>

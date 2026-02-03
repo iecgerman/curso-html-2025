@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mas inputs</title>
+</head>
+<body>
+    <form action="#" method="post">
+        <div>
+            <label for="password">Contraseña: (minimo 8 caracteres)</label>
+            <input id="password" type="password" name="password" required minlength="8">
+        </div>
+        <div>
+            <label for="edad">Edad:</label>
+            <input id="edad" type="number" name="edad" min="18" max="70">
+        </div>
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input id="fecha" type="date" name="fecha" min="2024-01-01" max="2024-12-31">
+        </div>
+        <div>
+            <label for="color">Color</label>
+            <input id="color" type="color" name="color">
+        </div>
+
+        <fieldset>
+            <legend>Género</legend>
+            <input id="masculino" type="radio" name="genero" value="M">
+            <label for="masculino">Masculino</label>
+
+            <input id="femenino" type="radio" name="genero" value="F">
+            <label for="femenino">Femenino</label>
+
+            <!-- CLASE 10 CHECKBOX -->
+
+            <fieldset>
+                <legend>Itereses:</legend>
+
+                <input id="deportes" type="checkbox" name="intereses" value="deportes">
+                <label for="deportes">Deportes</label>
+
+                <input id="musica" type="checkbox" name="intereses" value="musica">
+                <label for="musica">Musica</label>
+
+                <div>
+                    <label for="pais">Pais</label>
+                    <select name="pais" id="pais">
+                        <option value="México">México</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Argentina">Argentina</option>
+                    </select>
+                </div>
+            </fieldset>
+
+        </fieldset>
+    </form>
+</body>
+</html>

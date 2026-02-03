@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Registro</title>
+    <style>
+        /* Un poco de estilo básico para que se vea ordenado */
+        body { font-family: sans-serif; max-width: 400px; margin: 20px auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        div { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; box-sizing: border-box; }
+        button { background-color: #007BFF; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; width: 100%; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Registro de Usuario</h2>
+    
+    <form action="/enviar-datos" method="POST">
+        
+        <div>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej. Juan Pérez" required>
+        </div>
+
+        <div>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="120" required>
+        </div>
+
+        <div>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+        </div>
+
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+
+        <div>
+            <label for="fecha">Fecha de Registro:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div>
+            <label for="cantidad">Cantidad (ej. monto o unidades):</label>
+            <input type="number" id="cantidad" name="cantidad" step="0.01" required>
+        </div>
+
+        <div>
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+                <option value="">Selecciona un país</option>
+                <option value="mexico">México</option>
+                <option value="españa">España</option>
+                <option value="argentina">Argentina</option>
+                <option value="colombia">Colombia</option>
+                <option value="otros">Otros</option>
+            </select>
+        </div>
+
+        <button type="submit">Enviar Información</button>
+
+    </form>
+
+</body>
+</html>

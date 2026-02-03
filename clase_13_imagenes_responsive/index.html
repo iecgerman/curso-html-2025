@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes Responsive</title>
+</head>
+<body>
+
+    <img src="/img/clase_13_Imagenes_Responsive/hero-400.jpg" alt="Vista panoramica" 
+    srcset="
+    /img/clase13/hero-400.jpg 400w,
+    /img/clase13/hero-800.jpg 800w,
+    /img/clase13/hero-1200.jpg 1200w
+    " sizes="(max-width: 600px) 100vw, 50vw">
+
+    <picture>
+        <source media="(min-with: 768px)" srcset="/img/clase13/banner-desktop-800x400.jpg">
+        <source media="(min-with: 480px)" srcset="/img/clase13/banner-tablet-600x300.jpg">
+        <img src="/img/clase13/banner-movil-400x200.jpg" alt="paisajes naturales">
+    </picture>
+
+    <img 
+    src="/img/clase13/producto-600.jpg" 
+    alt="producto destacado"
+    srcset="/img/clase13/producto-300.jpg 300w, /img/clase13/producto-600.jpg 600w"
+    sizes="(max-width: 600px) 100vw, 600px"
+    loading="lazy"
+    decoding="async"
+    width="600"
+    height="400">
+
+    <div style="height: 2000px;"></div>
+
+    <img src="/img/felizNavidadHoHoHo.jpg" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+
+    <div style="height: 2000px;"></div>
+
+    <img src="/img/diploma-css-grid.png" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+
+    <div style="height: 2000px;"></div>
+
+    <img src="/img/old_computer_1_4MB.png" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+
+    <!-- <div style="height: 2000px;"></div> -->
+
+    <img src="/img/diploma-practico-css.png" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+    
+    <!-- <div style="height: 2000px;"></div> -->
+
+    <img src="/img/clase13/banner-tablet-600x300.original.jpg" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+    
+    <!-- <div style="height: 2000px;"></div> -->
+
+    <img src="/img/diploma-woocommerce.png" alt="santaclos" loading="lazy" width="800" height="600">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas soluta corrupti necessitatibus consequatur. Dignissimos voluptatibus exercitationem quod facere sit error nihil perspiciatis porro, ab, officiis quaerat ex recusandae dicta! Culpa.</p>
+    
+    <!-- <div style="height: 2000px;"></div> -->
+
+    <img src="/img/old_computer_tinypng.png" alt="santaclos" loading="lazy" width="800" height="600">
+    
+    
+</body>
+</html>

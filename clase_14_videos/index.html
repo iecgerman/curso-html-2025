@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integración de video y audio en HTML5 con controles y compatibilidad</title>
+</head>
+<body>
+
+    <!-- <video src="/multimedia/planeta-tierra.mp4"
+    controls width="1080" height="1080" autoplay loop>
+    </video> -->
+    
+    <!-- width="100%" -->
+    <!-- autoplay -->
+    <video
+    poster="/img/old_computer_tinypng.png"
+    preload="metadata"
+    width="400"
+    height="600"
+    loop
+    controls>
+        <source src="/multimedia/esto-es-la-matrix-neo.mp4"
+        type="video/mp4">
+        <source src="/multimedia/planeta-tierra.mp4"
+        type="video/mp4">
+        Tu navegador no soporta este formato de video Y LA QUESO
+    </video>
+
+    <audio src=""></audio>
+
+    <audio controls preload="none">
+        <source src="/multimedia/audio.mp3"
+        type="audio/mpeg">
+        tu navegador no soporte audio HTML5
+    </audio>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/64I9y088lvo?si=23UMbAb3bZJh1lCg&start=121" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>
